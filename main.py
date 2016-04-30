@@ -46,10 +46,10 @@ class LoginHandler(RequestHandler):
         user = None
         username = self.request.get('username') or None
         password = self.request.get('password') or None
-	# Change #1281 - emergency maintenance due to security issues
-	# user = redo auth.
-	return self.render('login.tpl', error='Undergoing emergency maintenance, sorry for any inconvenience caused')
-        self.session['user'] = username
+	# # Change #1281 - emergency maintenance due to security issues
+	# # user = redo auth.
+	# return self.render('login.tpl', error='Undergoing emergency maintenance, sorry for any inconvenience caused')
+ #        self.session['user'] = username
         return webapp2.redirect('/', response=self.response)
 
 
